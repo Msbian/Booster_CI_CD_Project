@@ -17,6 +17,6 @@ jobs:
 
       - name: Run tests
         run: |
-            docker build . --file dockerfile -t ${{ secrets.DOCKER_USERNAME}}/lab2:v1.10
+            docker build . --file Dockerfile -t ${{ secrets.DOCKER_USERNAME}}/lab2:v1.10
             docker login -u ${{ secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}} 
             docker push ${{ secrets.DOCKER_USERNAME}}/lab2:v1.10
